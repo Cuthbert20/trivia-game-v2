@@ -1,13 +1,9 @@
 import React from "react";
 import "./App.css";
-import Landing from "./Components/Landing/Landing";
+import routes from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-      <Landing />
-    </div>
-  );
+  return <div className="App">{routes}</div>;
 }
 
 export default App;
