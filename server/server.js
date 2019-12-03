@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 const session = require("express-session");
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
-const ctrl = "./controller.js";
+const ctrl = require("./controller.js");
 
 app.use(express.json());
 
@@ -21,6 +21,7 @@ app.use(
 );
 
 //endpoints
+app.get("/api/users", ctrl.allUsers);
 
 massive(CONNECTION_STRING)
   .then(db => {
