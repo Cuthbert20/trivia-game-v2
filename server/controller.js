@@ -43,14 +43,12 @@ module.exports = {
       req.session.user = newUser[0];
       //removing password from session
       delete newUser[0].password;
-      console.log(req.ression.user);
+      console.log(req.session.user);
       res
         .status(200)
         .send({ message: "Logged In", user: req.session.user, loggedIn: true });
     } catch (err) {
-      res
-        .status(500)
-        .send({ error: err, message: "Failed to Register, Sorry" });
+      res.status(500).send({ message: "Failed to Register" });
     }
   }
 };
