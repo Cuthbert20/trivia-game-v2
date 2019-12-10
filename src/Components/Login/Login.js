@@ -1,11 +1,13 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "./Login.css";
 
 function Login(props) {
   return (
-    <div>
+    <div className="Login-Container">
       <input type="text" placeholder="username" />
-      <input type="password" placeholder="password" />
+      <input type="text" placeholder="password" />
+      <button className="btn">Submit</button>
     </div>
   );
 }

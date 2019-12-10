@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "../Login/Login";
 import "./Landing.css";
+import Menu from "../Menu/Menu";
 
 function Landing(props) {
   // function handleRegister() {
@@ -8,36 +9,13 @@ function Landing(props) {
   // }
   return (
     <div>
-      <div className="menu-wrap">
-        <input type="checkbox" className="toggler" />
-        <div className="hamburger">
-          <div></div>
-        </div>
-        <div className="menu">
-          <div>
-            <div>
-              <ul>
-                <li>
-                  <a href="#/">Home</a>
-                </li>
-                <li>
-                  <a href="#/register">Register</a>
-                </li>
-                <li>
-                  <a href="#/freeplay">Free Play</a>
-                </li>
-                <li>
-                  <a href="#/about">About</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Menu />
       <header className="showcase">
         <div className="container showcase-inner">
           <h1>Trivia Time</h1>
+          <p>Time to Check Your Triva Skills</p>
           <Login />
+          <button className="btn">Contact Us</button>
         </div>
       </header>
     </div>
