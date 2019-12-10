@@ -36,11 +36,10 @@ function Landing(props) {
       </div>
       <header className="showcase">
         <div className="container showcase-inner">
-          <h1>Welcome</h1>
+          <h1>Trivia Time</h1>
           <Login />
         </div>
       </header>
-      <footer>Contact Us</footer>
     </div>
   );
 }

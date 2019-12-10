@@ -4,8 +4,8 @@ import { withRouter } from "react-router-dom";
 function Login(props) {
   return (
     <div>
-      <header></header>
-      <h1>Login Component</h1>
+      <input type="text" placeholder="username" />
+      <input type="password" placeholder="password" />
     </div>
   );
 }
