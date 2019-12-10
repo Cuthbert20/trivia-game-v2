@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 :root {
-  --primary-color: rgba(13, 110, 139, 0.7);
+  --primary-color: rgba(0, 126, 229, 0.7);
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
 }

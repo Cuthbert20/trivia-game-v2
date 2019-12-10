@@ -5,8 +5,15 @@ import "./Login.css";
 function Login(props) {
   return (
     <div className="Login-Container">
-      <input type="text" placeholder="username" />
-      <input type="text" placeholder="password" />
+      <article id="floatContainerUser" className="float-container">
+        <label for="floatField">Username</label>
+        <input input id="floatField" className="input" type="text" />
+      </article>
+      <br />
+      <article id="floatContainerPass" className="float-container">
+        <input type="text" />
+      </article>
+
       <button className="btn">Submit</button>
     </div>
   );

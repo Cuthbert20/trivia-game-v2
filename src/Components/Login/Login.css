@@ -4,3 +4,17 @@
   align-items: center;
   justify-content: center;
 }
+.float-container {
+  border: solid 1px #ccc;
+  position: relative;
+}
+
+.float-container > input {
+  border: none;
+  outline: 0;
+  background: transparent;
+}
+
+label {
+  position: absolute;
+}
