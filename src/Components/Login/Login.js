@@ -10,16 +10,20 @@ import "./Login.css";
 //   floatContainer.classList.remove("active");
 // });
 function Login(props) {
-  const [isActive, setIsActive] = useState(false);
+  const [isLoginInput, setLoginInput] = useState(false);
+  const [isPWInput, setPWInput] = useState(false);
+
   let handleFocus = () => {
-    setIsActive(!isActive);
+    setLoginInput(!isLoginInput);
   };
-  console.log(isActive);
+  let handlePWFocus = () => {
+    setPWInput(!isPWInput);
+  };
   return (
     <div className="Login-Container">
       <article
         id="floatContainerUser"
-        className={isActive ? "float-container active" : "float-container"}
+        className={isLoginInput ? "float-container active" : "float-container"}
       >
         <label htmlFor="floatField">Username</label>
         <input
@@ -31,8 +35,17 @@ function Login(props) {
         />
       </article>
       <br />
-      <article id="floatContainerPass" className="float-container">
-        <input type="text" />
+      <article
+        id="floatContainerPass"
+        className={isPWInput ? "float-container active" : "float-container"}
+      >
+        <label htmlFor="floatField">Password</label>
+        <input
+          onFocus={handlePWFocus}
+          onBlur={handlePWFocus}
+          className="input"
+          type="text"
+        />
       </article>
 
       <button className="btn">Submit</button>
