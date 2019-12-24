@@ -23,6 +23,7 @@ app.use(
 //endpoints
 app.get("/api/users", ctrl.allUsers);
 app.post("/api/user/register", ctrl.register);
+app.get("/auth/token", ctrl.getToken);
 
 massive(CONNECTION_STRING)
   .then(db => {

@@ -2,6 +2,7 @@ import React from "react";
 import Login from "../Login/Login";
 import "./Landing.css";
 import Menu from "../Menu/Menu";
+import FreePlay from "../FreePlay/FreePlay";
 
 function Landing(props) {
   // function handleRegister() {
@@ -16,6 +17,12 @@ function Landing(props) {
           <p>Time to Check Your Triva Skills</p>
           <Login />
           <button className="btn">Contact Us</button>
+          <button
+            className="btn"
+            onClick={() => props.history.push("/freeplay")}
+          >
+            Free Play
+          </button>
         </div>
       </header>
     </div>

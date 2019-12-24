@@ -1,4 +1,5 @@
 const bcrypt = require("bcryptjs");
+const axios = require("axios");
 
 module.exports = {
   //   getAllUsers: async (req, res) => {
@@ -50,5 +51,11 @@ module.exports = {
     } catch (err) {
       res.status(500).send({ message: "Failed to Register" });
     }
+  },
+  getToken: async (req, res, next) => {
+    let token = await axios.get(
+      "https://opentdb.com/api_token.php?command=request"
+    );
+    console.log(token.data.token);
   }
 };

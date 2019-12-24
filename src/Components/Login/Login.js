@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import "./Login.css";
+import useToggle from "../hooks/useToggle";
 // const floatField = document.getElementById("floatField");
 // const floatContainer = document.querySelector("#floatContainer");
 // floatField.addEventListener("focus", () => {
@@ -10,15 +11,9 @@ import "./Login.css";
 //   floatContainer.classList.remove("active");
 // });
 function Login(props) {
-  const [isLoginInput, setLoginInput] = useState(false);
-  const [isPWInput, setPWInput] = useState(false);
-
-  let handleFocus = () => {
-    setLoginInput(!isLoginInput);
-  };
-  let handlePWFocus = () => {
-    setPWInput(!isPWInput);
-  };
+  //useToggle custom hook
+  const [isLoginInput, setLoginInput] = useToggle(false);
+  const [isPWInput, setPWInput] = useToggle(false);
   return (
     <div className="Login-Container">
       <article
@@ -27,8 +22,8 @@ function Login(props) {
       >
         <label htmlFor="floatField">Username</label>
         <input
-          onFocus={handleFocus}
-          onBlur={handleFocus}
+          onFocus={setLoginInput}
+          onBlur={setLoginInput}
           id="floatField"
           className="input"
           type="text"
@@ -41,8 +36,8 @@ function Login(props) {
       >
         <label htmlFor="floatField">Password</label>
         <input
-          onFocus={handlePWFocus}
-          onBlur={handlePWFocus}
+          onFocus={setPWInput}
+          onBlur={setPWInput}
           className="input"
           type="text"
         />
