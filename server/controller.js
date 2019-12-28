@@ -56,6 +56,7 @@ module.exports = {
     let token = await axios.get(
       "https://opentdb.com/api_token.php?command=request"
     );
-    console.log(token.data.token);
+    req.session.token = token.data.token;
+    console.log(req.session.token);
   }
 };
